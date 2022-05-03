@@ -1,0 +1,43 @@
+Feladat – Szavazás cikkekre
+• Sok weboldal lehetőséget ad arra, hogy cikkekre,
+kérdésekre vagy linkekre szavazzunk.
+• A szavazatok figyelembe vételével a postokat
+rangsoroljuk és megjelenítjük a szavazattal kapott
+pontszámok alapján
+• Egy egyszerű weboldal Redis alapú back-end
+oldalát építjük meg.
+Feladat – Szavazás cikkekre
+1. Cikk felvétele: Tárolnunk kell a cikk információit:
+cím, link, ki posztolta, mikor posztolták.
+2. Egy cikk adatainak a kiírása
+3. Tárolt cikkek listázása
+4. Szavazás (felhasználói név, cikk): egy felhasználó egy
+cikkre csak egyszer szavazhat. A posztolás után 1
+héttel nem lehet szavazni.
+5. Legtöbb szavazatot kapott cikk
+6. A cikkek listája szavazatszám szerint csökkenően
+rendezve
+7. Legutoljára posztolt cikk
+8. A cikkek listája posztolási idő szerint csökkenően
+rendezve
+Feladat – Szavazás cikkekre
+• Cikkek csoportosítása
+• Sok cikkekre szavazó weboldalnak vannak csoportjai,
+amelyek csak bizonyos cikkekkel foglalkoznak, mint
+aranyos állatok, politika, Java programozás vagy REDIS
+használat.
+1. Csoport létrehozása
+2. Cikk csoporthoz rendelése
+3. Csoport cikkeinek listázása
+4. Egy csoport cikkeinek listája szavazatszám szerint
+csökkenően rendezve
+5. Egy csoport cikkeinek listája posztolási idő szerint
+csökkenően rendezve
+Gyakorlat: leszavazás
+• A példánkban csak azokat számoltuk, akik pozitívan
+szavaztak egy cikkre. Sok weboldalon negatívan is
+lehet szavazni.
+• Oldjuk meg, hogy pontszámmal lehessen szavazni,
+és negatív pontszámot is lehessen adni.
+• Ha lehetséges, oldjuk meg, hogy a felhasználók
+módosítsák a szavazataikat. 

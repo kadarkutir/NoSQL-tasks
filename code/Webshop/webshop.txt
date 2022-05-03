@@ -1,0 +1,72 @@
+Példa – Webshop
+• 1. Felhasználó azonosítása névvel és jelszóval,
+amelyből tokent generálunk, mely a kliens oldalon
+tárolható. Problémák és feladatok
+• Felhasználó regisztrációja:
+• Felhasználók tárolása (név, jelszó, email, valódi név, születési
+dátum) (ne írjuk felül a létező felhasználói nevet, jelezzük, ha már
+van)
+• A felhasználó bejelentkezik
+• Token generálás (kódolt karaktersorozat, melyet a rendszer
+autentitikációra használ)
+• felhasználói név és token tárolása (egy felhasználónak lehet több
+tokenje)
+• Felhasználó törlése (email)
+• Felhasználó törlése (név)
+• Egyéb:
+• Elfelejtett jelszó: csak adjuk vissza a jelszót
+• Felhasználók listája
+• A token érvényes-e függvény (amit később fogunk használni)
+Példa – Webshop
+• 2. Ha a felhasználók nem aktívak 20 percig, akkor
+jelentkeztessük ki őket
+• Az utolsó aktivitásuk után 20 perccel töröljük őket
+• Az utolsó aktivitást kell tárolni
+• Minden kattintás egy aktivitás (amikor kattint, meg kell
+hívni az kattint eljárást)
+• Tároljuk a felhasználók aktivitását (elég az utolsót)
+• Töröljük a 20 percnél idősebb aktivitásokat és tokeneket
+Példa – Webshop
+• 2. Ha a felhasználók nem aktívak 20 percig, akkor
+jelentkeztessük ki őket. Ha kevés felhasználónk (pl.
+1000 token) van (így a memóriában van hely),
+akkor maradhatnak.
+• Zset a kattintások tárolására (aki bejelentkezik is kattint)
+• Automatikusan lefutó token_takarito eljárás
+Példa – Webshop
+• 3. Kosár tárolása
+• Az egyes cikkekből a felhasználó hány darabot tesz a
+kosárba. Tfh a cikkek egy relációs adatbázisban vannak
+tárolva. A redisben csak a cikkek azonosítói vannak egy
+cikk nevű set-ben.
+• Listázzuk a cikk set elemeit.
+• (Most legyen metódus, ami felvesz egy cikket )
+Példa – Webshop
+• 3. Kosár tárolása
+• Kosárba tesz:
+• A kosár egy hash lesz, a kulcsa a felhasználó tokenje (lehetne a
+felhasználó neve?), a mező a cikk azonosító, az érték, hogy
+hány darabot rendel.
+• Ez legyen a kosár módosító eljárás is, azaz ha a darabszámot
+csökkenti vagy növeli, akkor a függvény végezze azt el.
+• A felhasználónak be kell lennie jelentkezve (azaz van tokenje)
+• Ha a felhasználó munkamenete lejár, akkor a kosarát is törölni
+kell.
+• A felhasználó „kattintott”
+• Listázzuk a kosár tartalmát
+Példa – Webshop
+• 4. Megrendel
+• A megrendelő nevét, címét, telefonszámát
+felolvashatnánk adatbázisból (redis) (ha van). Egyébként
+bekérjük.
+• A megrendelést relációs adatbázisban fogjuk tárolni.
+Azonban a megrendelések tárolásának gyorsítása
+érdekében a megrendelést cache-ljük a redisben. Azaz
+tároljuk egy JSON-ben (másban is lehetne) az
+információkat.
+• A kosár tartalma törlődik.
+• A felhasználó „kattintott”
+Példa – Webshop
+• 4. Megrendel
+• A JSON-t egy démon időről időre beszúrjuk egy relációs
+táblába. 

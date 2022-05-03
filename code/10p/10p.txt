@@ -1,0 +1,19 @@
+A következő adatainkat Redisben szeretnénk tárolni, és Pythonnal szeretnénk kezelni:
+Dolgozók feladatokat írnak ki, prioritásokat, munkavégzőket rendelnek hozzá, elvégzik a feladatot. 
+Hozzunk létre osztályt, mely a következő metódusokkal rendelkezik:
+új dolgozó felvétele: paramétere: email, név. A dolgozót azonosíthatjuk az email címével.
+dolgozók emailjéhez a név kiírása
+dolgozók nevéhez az emailjének a kiírása
+új feladatot kiírása: paraméterei: kiírja ki (email), leírás, prioritás. A feladatokhoz generáljunk azonosítót,
+ a metódus adja az azonosítót vissza. 
+feladathoz munkavégző (dolgozó) rendelése: paraméterei: feladat, munkavégző email. 
+Egy feladatot több munkavégző is el tud végezni (azt adjuk itt meg), de majd csak egy munkavégző végzi el a
+ valóságban. A feladat elvégzőjét előzetesen hozzá kell rendelni a feladathoz.
+feladat lehetséges munkavégzőinek a leírása
+feladatok listázása prioritás szerint (elég az azonosítót és a prioritást visszaadni)
+feladatazonosítóhoz adjuk vissza a leírását
+munka elvégzése (ki, mit): a feladatok közül töröljük az adott munkát, amit elvégeztek.
+dolgozók emailjének listázása az elvégzett feladatok darabszáma szerinti sorrendben.
+Próbáljuk ki az metódusokat.
+
+Pontozás: minden metódus helyes megoldása 1 pontot ér

@@ -1,0 +1,16 @@
+Írjon phython osztályt, amely olyan metódusokat implementál, amely Redisben végez műveleteket a következő problémához: 
+Taxi
+
+1. autó és sofőr felvétele (rendszám, sofőrnév, szállítható utasok száma, autó_évjárata, autótípusa, telefonszám) (egy rendszám csak egyszer szerepelhet)
+2. az autó és a sofőr  szolgálatba áll (mikortól)
+3. az autó és a sofőr  befejezi szolgálatot (időpont)
+4. A szolgálatban lévő autók kezdési időpont szerint csökkenően rendezve
+5. ut_rendelés (cím, időpont, létszám) (jó, ha lesz azonosítója)
+6. az úthoz sofőr és autó rendelése
+7. az út_teljesítése, ár, km rögzítése
+8. az autók és sofőrök listája összkm alapján rendezve
+9. az autó és a sofőr adatainak a lekérdezése (rendszam)
+10. a megrendelt, de még le nem zárt utak listája
+11. a szolgálatban lévő autók listája a szolgálat időtartamára vonatkozó összár alapján növekvően rendezve
+
+Kérek egy osztályt, amely ezeket a metódusokat implementálja, és egy futtató kódot, amivel kipróbálták.

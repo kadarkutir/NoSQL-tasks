@@ -1,0 +1,42 @@
+Példa – Felhasználó utolsó
+hívásainak a tárolása
+• 1. Felhasználó azonosítása névvel és jelszóval,
+amelyből tokent generálunk, mely a kliens oldalon
+tárolható. Problémák és feladatok
+• Felhasználó regisztrációja:
+• Felhasználók tárolása (név, jelszó) (ne írjuk felül a létező
+felhasználói nevet, jelezzük, ha már van)
+• A felhasználó bejelentkezik
+• Token generálás (kódolt karaktersorozat, melyet a rendszer
+autentitikációra használ)
+• felhasználói név és token tárolása (egy felhasználónak lehet több
+tokenje)
+• Egyéb:
+• Elfelejtett jelszó: csak adjuk vissza a jelszót
+• Felhasználók listája
+• A token érvényes-e függvény (amit később fogunk használni)
+Példa – Felhasználó utolsó
+hívásainak a tárolása
+• 2. Felhasználó utolsó 100 utasításának a tárolása
+(mindegy melyik tokenje végezte)
+Példa – Felhasználó utolsó
+hívásainak a tárolása
+• 2. Felhasználó utolsó 100 utasításának a tárolása
+(mindegy melyik tokenje végezte)
+• Nem kell tudnunk, hogy mikor történt az utasítás
+• Egy lista elég hozzá, hogy tároljuk az infót, sorba
+egymás után a felhasználó (és nem a token) utasításait
+Példa – Felhasználó utolsó
+hívásainak a tárolása
+• Készítsünk osztályt, amely a következő metódusokat
+tartalmazza, majd próbáljuk ki az összes metódust:
+1. Felhasználó regisztrációja (név, jelszó)
+2. Felhasználó bejelentkezik (név, jelszó): egy tokent ad vissza
+3. Elfelejtett jelszó: felhasználói névhez adjuk vissza a jelszót
+4. Felhasználók listája
+5. Felhasználó kijelentkezik (töröljük a tokent)
+6. Token érvényes-e (azt vizsgálja, hogy a felhasználó be van-e
+jelentkezve)
+7. Token utasítást ad ki (token, utasítás)
+8. A felhasználó lekérdezi a 100 utolsó utasítását (felhasználói
+név)
